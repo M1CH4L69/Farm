@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public class Farm {
+
+
     private String name;
     private ArrayList<Animal> list;
     private ArrayList<Flower> list2;
@@ -44,12 +46,17 @@ public class Farm {
         }
     }
 
-    public void printFarm(){
-        for (int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
+    public void printFarm(String selectList){
+        if (selectList.equalsIgnoreCase("Animal")){
+            for (int i = 0; i < list.size(); i++){
+                System.out.println(list.get(i));
+            }
         }
-        for (int j = 0; j < list2.size(); j++){
-            System.out.println(list2.get(j));
+
+        if(selectList.equalsIgnoreCase("Flower")){
+            for (int j = 0; j < list2.size(); j++){
+                System.out.println(list2.get(j));
+            }
         }
     }
 
